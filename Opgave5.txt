@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Security;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Opgave1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string Navn;
+            int Alder ;
+
+            Console.WriteLine("Hej indtast dit navn");
+            Navn = Console.ReadLine();
+            Console.WriteLine("Indtast nu din alder");
+            Alder = int.Parse(Console.ReadLine());
+
+            Console.WriteLine($"Hej {Navn} du er {Alder} år gammel");
+
+            Console.ReadKey();
+        }
+    }
+}
