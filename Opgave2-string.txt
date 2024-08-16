@@ -1,0 +1,21 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int Alder = 17;
+            string Navn = "Andreas";
+            double Længde = 33.0;
+            double Nylængde;
+
+            Console.WriteLine($"Mit navn er {Navn}. Jeg er {Alder} år gammel og har {Længde}km til skole");
+            Console.ReadKey();
+            // beregner ny længde til skole
+            Nylængde = Længde + 10;
+            Console.WriteLine($"Jeg er lige flyttet så nu har jeg {Nylængde}km til skole");
+
+            Console.ReadKey();
+        }
+    }
+}
