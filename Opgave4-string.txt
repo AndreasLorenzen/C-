@@ -1,0 +1,16 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double Penge = 200.50;
+            string Tekst1 = "Jeg har";
+            string Tekst2 = "kr. i banken";
+
+            Console.WriteLine($"{Tekst1} {Penge} {Tekst2}");
+
+            Console.ReadKey();
+        }
+    }
+}
