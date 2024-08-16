@@ -1,0 +1,22 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double Regn1 = 2 + 1 * 2;
+            double Regn2 = (2 + 1) * 2;
+            double Regn3 = 5.0 / 2;
+            double Regn4 = 8 % 3;
+            double Regn5 = 1 - 5;
+
+            Console.WriteLine($"2+1*2 = {Regn1}");
+            Console.WriteLine($"(2+1)*2 = {Regn2}");
+            Console.WriteLine($"5/2 = {Regn3}");
+            Console.WriteLine($"8%3 = {Regn4}");
+            Console.WriteLine($"1-5 = {Regn5}");
+
+            Console.ReadKey();
+        }
+    }
+}
