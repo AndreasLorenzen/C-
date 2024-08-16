@@ -1,0 +1,24 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int Alder;
+
+            Console.WriteLine("Indtast din alder herunder");
+            Alder = int.Parse(Console.ReadLine());
+
+            if (Alder >= 57)
+            {
+                Console.WriteLine(" Du er for gammel");
+            }
+
+            else if (Alder < 57)
+            {
+                Console.WriteLine("Du er ikke gammel nok");
+            }
+            Console.ReadKey();
+        }
+    }
+}
