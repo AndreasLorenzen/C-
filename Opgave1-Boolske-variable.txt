@@ -1,0 +1,18 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int var1 = 10;
+            int var2 = 7;
+
+            bool idk = var1 > var2;
+
+            Console.WriteLine(idk);
+
+
+            Console.ReadKey();
+        }
+    }
+}
