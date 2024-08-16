@@ -1,0 +1,20 @@
+namespace Opgave6
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int Radius;
+            double Areal;
+
+            Console.WriteLine("Du er ankommet til raius beregneren");
+            Console.WriteLine("Indtast radius af cirkel herunder");
+            Radius = int.Parse(Console.ReadLine());
+
+            Areal = Math.PI * Math.Pow(Radius, 2);
+
+            Console.WriteLine($"Arealet af cirklen er {Areal}cm2");
+            Console.ReadKey();
+        }
+    }
+}
