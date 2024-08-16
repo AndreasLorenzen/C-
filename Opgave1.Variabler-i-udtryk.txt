@@ -1,0 +1,18 @@
+namespace Opgave_Strings
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int Tal = 2;
+            int Tal1 = 6;
+            int Tal2 = 10;
+
+            int Resultat = Tal2 * Tal1 / Tal;
+
+            Console.WriteLine($"10*6/2 = {Resultat}");
+
+            Console.ReadKey();
+        }
+    }
+}
