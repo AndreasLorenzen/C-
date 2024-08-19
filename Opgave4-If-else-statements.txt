@@ -1,0 +1,37 @@
+namespace If_else
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            string Navn;
+            string Bruger;
+            string Kode;
+
+            string rigtignavn = "Andreas";
+            string rigtigbruger = "And";
+            string rigtigkode = "123";
+
+            Console.WriteLine("Velkommen til hjemesiden");
+            Console.WriteLine("Indtast Navn, Brugernavn og password");
+            Console.WriteLine("Navn");
+            Navn = Console.ReadLine();
+            Console.WriteLine("Brugernavn");
+            Bruger = Console.ReadLine();
+            Console.WriteLine("Password");
+            Kode = Console.ReadLine();
+
+            if (Navn == rigtignavn && Bruger == rigtigbruger && Kode == rigtigkode)
+            {
+                Console.WriteLine($"Velkommen {rigtignavn}");
+            }
+            else if (Navn != rigtignavn && Bruger != rigtigbruger && Kode != rigtigkode)
+            {
+                Console.WriteLine("Indtastning er forkert");
+            }
+
+
+                Console.ReadKey();
+        }
+    }
+}
