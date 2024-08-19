@@ -1,0 +1,81 @@
+namespace If_else
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int km;
+            double Penge;
+            double Mangepenge;
+
+            string Navn;
+            string Bruger;
+            string Kode;
+
+            string rigtignavn = "Andreas";
+            string rigtigbruger = "And";
+            string rigtigkode = "123";
+
+            Console.WriteLine("Velkommen til hjemmesiden");
+
+            //Spørg efter brugernavn
+            Console.WriteLine("Indtast Brugernavn:");
+            Bruger = Console.ReadLine();
+
+            //Tjek om brugernavnet er korrekt
+            if (Bruger == rigtigbruger)
+            {
+                //Hvis brugernavn er korrekt, spørg om password
+                Console.WriteLine("Indtast Password:");
+                Kode = Console.ReadLine();
+
+                //Tjek om passwordet er korrekt
+                if (Kode == rigtigkode)
+                {
+                    //Hvis både brugernavn og password er korrekt, bed om navn
+                    Console.WriteLine("Indtast Navn:");
+                    Navn = Console.ReadLine();
+
+                    if (Navn == rigtignavn)
+                    {
+                        Console.WriteLine($"Velkommen {rigtignavn}");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Navnet er forkert.");
+                    }
+                }
+                else
+                {
+                    //Hvis passwordet er forkert
+                    Console.WriteLine("Passwordet er forkert.");
+                }
+            }
+            else
+            {
+                //Hvis brugernavnet er forkert
+                Console.WriteLine("Brugernavnet er forkert.");
+            }
+            Console.WriteLine("Hvor mange kilometer skal du køre hver dag?");
+            km = Convert.ToInt32(Console.ReadLine());
+
+            Mangepenge = 96 * 1.93 + (km - 120) * 0.97;
+            Penge = (km - 24) * 1.93;
+
+            if (km <= 24)
+            {
+                Console.WriteLine("du kører ikke nok kilometer til at få fradrag");
+            }
+            else if (km > 24 && km < 121)
+            {
+                Console.WriteLine($"Du vil modtage et fradrag på {Penge}kr.");
+            }
+            else if (km > 121)
+            {
+                Console.WriteLine($"Du vil modtage et fradrag på {Mangepenge}kr.");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
