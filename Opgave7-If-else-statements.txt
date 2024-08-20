@@ -1,0 +1,66 @@
+using System.ComponentModel.Design;
+
+namespace Festen
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Title = "Festen";
+
+            Console.WriteLine("Hvad er din yndlingsfarve rød,grøn,blå eller gul? (skal være med stort forbogstav)");
+            string Yndlingsfarve = Console.ReadLine();
+
+            Console.WriteLine("Hvor gammel er du?");
+            string Alder = Console.ReadLine();
+
+            int alder;
+            bool gyldigalder = int.TryParse(Alder, out alder);
+
+            if (gyldigalder)
+            {
+                if (Yndlingsfarve == "Rød")
+                {
+                    Console.BackgroundColor = ConsoleColor.Red;
+                }
+                else if (Yndlingsfarve == "Grøn")
+                {
+                    Console.BackgroundColor = ConsoleColor.Green;
+                }
+                else if (Yndlingsfarve == "Blå")
+                {
+                    Console.BackgroundColor = ConsoleColor.Blue;
+                }
+                else if (Yndlingsfarve == "Gul")
+                {
+                    Console.BackgroundColor = ConsoleColor.Yellow;
+                }
+                else
+                {
+                    Console.WriteLine("ugyldig indtastning");
+                }
+
+                Console.Clear();
+
+                if (alder > 18)
+                {
+                    Console.WriteLine("Velkommen til cocktailbaren");
+                }
+                else
+                {
+                    Console.WriteLine("velkommen til sodavandsbaren");
+                }
+            }
+
+            else
+            {
+                Console.WriteLine("Ugyldig alder indtastet");
+            }
+
+                System.Threading.Thread.Sleep(10000);
+
+            
+
+        }
+    }
+}
