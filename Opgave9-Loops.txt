@@ -1,0 +1,63 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Indtast rammens bredde (antal kolonner): ");
+        int width = int.Parse(Console.ReadLine());
+
+        Console.Write("Indtast rammens højde (antal rækker): ");
+        int height = int.Parse(Console.ReadLine());
+
+        // Definer start- og slutpositioner baseret på input
+        int startX = 20;
+        int startY = 4;
+        int endX = startX + width - 1;
+        int endY = startY + height - 1;
+
+        // Tegn den øverste kant
+        for (int x = startX; x <= endX; x++)
+        {
+            Console.SetCursorPosition(x, startY);
+            Console.Write('*');
+        }
+
+        // Tegn den nederste kant
+        for (int x = startX; x <= endX; x++)
+        {
+            Console.SetCursorPosition(x, endY);
+            Console.Write('*');
+        }
+
+        // Tegn venstre kant
+        for (int y = startY + 1; y < endY; y++)
+        {
+            Console.SetCursorPosition(startX, y);
+            Console.Write('*');
+        }
+
+        // Tegn højre kant
+        for (int y = startY + 1; y < endY; y++)
+        {
+            Console.SetCursorPosition(endX, y);
+            Console.Write('*');
+        }
+
+        // Spørg om brugerens navn
+        Console.SetCursorPosition(startX + 1, startY + 1);
+        Console.Write("Indtast dit navn: ");
+        string name = Console.ReadLine();
+
+        // Find den passende position for at skrive navnet inde i rammen
+        int nameLength = name.Length;
+        int centerX = (startX + endX - nameLength) / 2;
+        int centerY = (startY + endY) / 2;
+
+        // Skriv navnet inde i rammen
+        Console.SetCursorPosition(centerX, centerY);
+        Console.Write(name);
+
+        Console.ReadKey();
+    }
+}
