@@ -1,0 +1,50 @@
+namespace Switch.case_2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Velkommen til drinksbaren");
+            Console.WriteLine("Du kan nu vælge imellem 6 foorkellige drinks");
+            Console.WriteLine("Vores dinks er nummeret fra 1 til 6");
+            Console.WriteLine("Indtast nummeret på den drink du vil have");
+            Console.WriteLine("1. Isbjørn");
+            Console.WriteLine("2. Champangebrus");
+            Console.WriteLine("3. Tequila Sunrise");
+            Console.WriteLine("4. Mojito");
+            Console.WriteLine("5. Brandbil");
+            Console.WriteLine("6. Filur");
+            int num = int.Parse(Console.ReadLine());
+
+            switch (num)
+            {
+                case 1:
+                    Console.WriteLine("Du har valgt Isbjørn til 60kr.");
+                    break;
+                case 2:
+                    Console.WriteLine("Du har valgt Champangebrus til 50kr.");
+                    break;
+                case 3:
+                    Console.WriteLine("Du har valgt Tequila Sunrise til 65kr.");
+                    break;
+                case 4:
+                    Console.WriteLine("Du har valgt Mojito til 70kr.");
+                    break;
+                case 5:
+                    Console.WriteLine("du har valgt Brandbil til 50kr.");
+                    break;
+                case 6:
+                    Console.WriteLine("Du har valgt Filur til 69kr.");
+                    break;
+
+                default:
+                    Console.WriteLine("Du skal vælge en af de 6 drinks");
+
+                return;
+            }
+                Console.ReadKey(); 
+
+            }
+        }
+    }
+
