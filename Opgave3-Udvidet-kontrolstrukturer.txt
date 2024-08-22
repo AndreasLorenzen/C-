@@ -1,0 +1,29 @@
+namespace Ogave3_Udvidet_kontrolstrukturer
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double km;
+
+            Console.WriteLine("Hvor mange kilometer køre du om agen for at komme til/fra arbejde");
+            km = double.Parse(Console.ReadLine());
+
+            double penge1 = km * 1.54;
+            double penge2 = km * 0.77;
+
+            if (km > 100)
+            {
+                Console.WriteLine($"Du vil modtage {penge2}kr.");
+            }
+            else if (km > 24 && km <= 100 )
+            {
+                Console.WriteLine($"Du vil modtage {penge1}kr.");
+            }
+            else if (km <=24 || km == 0)
+            {
+                Console.WriteLine("Du kører ikke langt nok til at modtage befordring");
+            }
+        }
+    }
+}
