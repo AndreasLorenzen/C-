@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Bøger
+{
+    internal class Bog
+    {
+
+        public void PrintInfo()
+        {
+            Console.WriteLine("Jeg er en bog.");
+
+        }
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Bog Bøsse = new Bog();
+                Bøsse.PrintInfo();
+
+                Console.ReadKey();
+            }
+        }
+    }
+}
