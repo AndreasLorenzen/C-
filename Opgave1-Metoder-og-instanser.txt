@@ -1,0 +1,39 @@
+using System;
+
+class Program
+{
+    // Metode der tager to integer parametre: pris og penge, og returnerer en boolean.
+    // Metoden returnerer true, hvis man har penge nok til at købe bogen, ellers returneres false.
+    public static bool HarRåd(int pris, int penge)
+    {
+        // Hvis det antal penge, vi har (penge), er lig med eller større end prisen på bogen (pris),
+        // så returnerer vi true, ellers returnerer vi false.
+        return penge >= pris;
+    }
+
+    static void Main(string[] args)
+    {
+        // Definer prisen på Sherlock Holmes-bogen (den koster 150 kr)
+        int bogPris = 150;
+
+        // Informer brugeren om at indtaste, hvor mange penge de har
+        Console.WriteLine("Hvor mange penge har du?");
+
+        // Læs brugerens input fra konsollen (det, brugeren indtaster) som en streng
+        // Brug int.Parse til at konvertere strengen til et heltal (integer)
+        int minePenge = int.Parse(Console.ReadLine());
+
+        // Brug HarRåd-metoden til at tjekke, om brugeren har nok penge til at købe bogen
+        // Vi sender bogens pris (bogPris) og brugerens penge (minePenge) som parametre til metoden.
+        if (HarRåd(bogPris, minePenge))
+        {
+            // Hvis metoden returnerer true, har brugeren råd, og vi udskriver beskeden "Jeg har råd"
+            Console.WriteLine("Jeg har råd");
+        }
+        else
+        {
+            // Hvis metoden returnerer false, har brugeren ikke råd, og vi udskriver beskeden "Jeg har desværre ikke råd"
+            Console.WriteLine("Jeg har desværre ikke råd");
+        }
+    }
+}
