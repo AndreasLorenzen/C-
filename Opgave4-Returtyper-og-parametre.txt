@@ -1,0 +1,60 @@
+using System;
+
+namespace Program
+{
+    class Bil
+    {
+        // Metode der udskriver "Motoren er startet"
+        public void StartMotor()
+        {
+            Console.WriteLine("Motoren er startet.");
+        }
+
+        // Metode der udskriver "Motoren er slukket"
+        public void SlukMotor()
+        {
+            Console.WriteLine("Motoren er slukket.");
+        }
+
+        public void FillGas(double liters, bool IsDieel)
+        {
+            if (IsDieel)
+            {
+                Console.WriteLine("Filled tank with " + liters + " liters of diesel");
+            }
+            else
+            {
+                Console.WriteLine("Filled tank with " + liters + " liters of benzin");
+            }
+        }
+        public double RemainingGas()
+        {
+            return 45.7;
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // Opretter et objekt af klassen Bil
+            Bil minBil = new Bil();
+            
+            // Kalder begge metoder
+            minBil.StartMotor();
+            minBil.SlukMotor();
+
+            double liters = 2.5;
+
+            minBil.FillGas(liters, true);
+            minBil.FillGas(liters, false);
+
+            double remainingGas = minBil.RemainingGas();
+
+            Console.WriteLine("Remaining gas in the tank (via variable): " + remainingGas + " liters");
+            Console.WriteLine("Remaining gas in the tank (Via method call): " + minBil.RemainingGas() +" liters");
+
+            Console.ReadKey();
+        }
+    }
+}
